@@ -27,12 +27,7 @@ pub enum ContractError {
     MintExceeded{},
 
 
-    #[error("Escrow expired (end_height {end_height:?} end_time {end_time:?})")]
-    Expired {
-        end_height: Option<u64>,
-        end_time: Option<u64>,
-    },
-
-    #[error("Escrow not expired")]
-    NotExpired {},
+    
+    #[error("You are not white user")]
+    WrongWhiteUser {},
 }
